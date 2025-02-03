@@ -372,7 +372,10 @@ packages:
 - pypi: .
   name: land
   version: 0.0.1
-  sha256: b8c2ed016f46e08fa0a13c1005639c504568401230ceb254d1f7e2a2fd96f229
+  sha256: 6b7985227bf27eb6fc863bb1b28a6fc65deb41f1b487862322d29c72bb73a9d8
+  requires_dist:
+  - fastapi
+  - uvicorn
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.43-h712a8e2_2.conda
