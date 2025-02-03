@@ -4,7 +4,7 @@
 *.egg-info
 
 # python
-src/land/__pycache__/**
+src/park/__pycache__/**
 dist
 build
 *.egg-info

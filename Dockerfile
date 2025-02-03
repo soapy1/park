@@ -11,4 +11,4 @@ RUN python -m pip install .
 EXPOSE 8000
 
 # Run the FastAPI server
-CMD [ "uvicorn", "land.main:app", "--host", "0.0.0.0" ]
+CMD [ "uvicorn", "park.main:app", "--host", "0.0.0.0" ]

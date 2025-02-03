@@ -1,4 +1,4 @@
-# Land
+# Park
 
 Goal of this project is to create a simple server for uploading and retrieving DOF checkpoints.
 
@@ -16,9 +16,9 @@ $ pixi run dev
 
 Or, using docker
 ```
-$ docker build -t land:local .
+$ docker build -t park:local .
 
-$ docker run -p 8000:8000 -it land:local
+$ docker run -p 8000:8000 -it park:local
 ```
 
 ## Uploading

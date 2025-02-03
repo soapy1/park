@@ -1,10 +1,10 @@
 import os
 from fastapi import FastAPI, File, UploadFile
 
-from land.data.data import DataDir
+from park.data.data import DataDir
 
 app = FastAPI()
-data_dir = DataDir(os.environ.get("LAND_DATA_DIR", "/tmp/land/data"))
+data_dir = DataDir(os.environ.get("park_DATA_DIR", "/tmp/park/data"))
 
 @app.get("/namespaces")
 async def get_namespaces():

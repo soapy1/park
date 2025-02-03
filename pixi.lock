@@ -369,15 +369,6 @@ packages:
   - pkg:pypi/jinja2?source=hash-mapping
   size: 112561
   timestamp: 1734824044952
-- pypi: .
-  name: land
-  version: 0.0.1
-  sha256: 6b7985227bf27eb6fc863bb1b28a6fc65deb41f1b487862322d29c72bb73a9d8
-  requires_dist:
-  - fastapi
-  - uvicorn
-  requires_python: '>=3.11'
-  editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.43-h712a8e2_2.conda
   sha256: 7c91cea91b13f4314d125d1bedb9d03a29ebbd5080ccdea70260363424646dbe
   md5: 048b02e3962f066da18efe3a21b77672
@@ -574,6 +565,15 @@ packages:
   purls: []
   size: 2937158
   timestamp: 1736086387286
+- pypi: .
+  name: park
+  version: 0.0.1
+  sha256: a6b6f6cc1a6edf8b98333e3824ded68a89d17fbfffad67e4a00148cbd852cbb4
+  requires_dist:
+  - fastapi
+  - uvicorn
+  requires_python: '>=3.11'
+  editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.10.6-pyh3cfb1c2_0.conda
   sha256: 9a78801a28959edeb945e8270a4e666577b52fac0cf4e35f88cf122f73d83e75
   md5: c69f87041cf24dfc8cb6bf64ca7133c7

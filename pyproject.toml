@@ -1,6 +1,6 @@
 [project]
-name = "land"
-description = "Land server for uploading and retrieving DOF checkpoints"
+name = "park"
+description = "server for uploading and retrieving DOF checkpoints"
 version = "0.0.1"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -19,8 +19,8 @@ channels = ["conda-forge"]
 platforms = ["linux-64"]
 
 [tool.pixi.pypi-dependencies]
-land = { path = ".", editable = true }
+park = { path = ".", editable = true }
 
 [tool.pixi.tasks]
-dev = "uvicorn land.main:app --reload"
-start = "uvicorn land.main:app --host 0.0.0.0"
+dev = "uvicorn park.main:app --reload"
+start = "uvicorn park.main:app --host 0.0.0.0"
