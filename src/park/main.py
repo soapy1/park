@@ -1,10 +1,12 @@
 import os
-from fastapi import FastAPI, File, UploadFile
+import yaml
+from typing import Dict, Any
+from fastapi import FastAPI, File, UploadFile, Body
 
 from park.data.data import DataDir
 
 app = FastAPI()
-data_dir = DataDir(os.environ.get("park_DATA_DIR", "/tmp/park/data"))
+data_dir = DataDir(os.environ.get("PARK_DATA_DIR", "/tmp/park/data"))
 
 @app.get("/namespaces")
 async def get_namespaces():
@@ -51,7 +53,24 @@ async def get_checkpoint(namespace: str, environment: str, checkpoint: str):
     }
 
 
-@app.post("/{namespace}/{environment}/{checkpoint}")
-async def upload_checkpoint(namespace: str, environment: str, checkpoint: str, file: UploadFile = File(...)):
+@app.post("/{namespace}/{environment}/{checkpoint}/file")
+async def upload_checkpoint(
+    namespace: str,
+    environment: str,
+    checkpoint: str,
+    file: UploadFile = File(...)
+):
     data_dir.write_checkpoint(namespace, environment, checkpoint, file.file.read())
+    return {"message": f"uploading checkpoint '{checkpoint}' in {namespace}/{environment}"}
+
+
+@app.post("/{namespace}/{environment}/{checkpoint}/json")
+async def upload_checkpoint_data(
+    namespace: str,
+    environment: str,
+    checkpoint: str,
+    data: Dict[str, Any] = Body(None),
+):
+    bytes_data = yaml.dump(data).encode("utf-8")
+    data_dir.write_checkpoint(namespace, environment, checkpoint, bytes_data)
     return {"message": f"uploading checkpoint '{checkpoint}' in {namespace}/{environment}"}
