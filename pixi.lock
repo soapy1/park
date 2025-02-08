@@ -568,10 +568,12 @@ packages:
 - pypi: .
   name: park
   version: 0.0.1
-  sha256: a6b6f6cc1a6edf8b98333e3824ded68a89d17fbfffad67e4a00148cbd852cbb4
+  sha256: e50af32bb305e99fb9b8806bc32fc6a75a3abbd0c392f4e0876867e4fa8d1df5
   requires_dist:
   - fastapi
   - uvicorn
+  - pyyaml
+  - python-multipart
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pydantic-2.10.6-pyh3cfb1c2_0.conda

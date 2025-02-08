@@ -33,6 +33,7 @@ $ curl -i -X POST -H "Content-Type: application/json" -d '{"data": "hello"}' htt
 
 ## Retrieving
 
+
 ```bash
 # list all namespaces
 $ curl http://localhost:8000/namespaces

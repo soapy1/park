@@ -8,7 +8,7 @@ keywords = ["conda"]
 authors = [
   { name = "Sophia Castellarin", email = "sophia.castellarin@quansight.com" },
 ]
-dependencies = ["fastapi", "uvicorn"]
+dependencies = ["fastapi", "uvicorn", "pyyaml", "python-multipart"]
 
 [build-system]
 build-backend = "hatchling.build"
