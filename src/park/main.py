@@ -8,6 +8,14 @@ from park.data.data import DataDir
 app = FastAPI()
 data_dir = DataDir(os.environ.get("PARK_DATA_DIR", "/tmp/park/data"))
 
+
+@app.get("/status")
+async def get_namespaces():
+    return {
+        "ok": "sure am"
+    }
+
+
 @app.get("/namespaces")
 async def get_namespaces():
     namespaces = data_dir.list_namespaces()
