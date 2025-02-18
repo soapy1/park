@@ -4,12 +4,11 @@
 *.egg-info
 
 # python
-src/park/__pycache__/**
+__pycache__
 dist
 build
 *.egg-info
 .pytest_cache
-.pyc
 
 # yarn / nuxt
 node_modules

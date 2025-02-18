@@ -56,7 +56,7 @@ async def get_checkpoint(namespace: str, environment: str, checkpoint: str):
             "namespace": namespace,
             "environment": environment,
             "checkpoint": checkpoint,
-            "checkpoint_data": checkpoint_data
+            "checkpoint_data": yaml.load(checkpoint_data, yaml.FullLoader)
         }
     }
 
