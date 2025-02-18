@@ -10,7 +10,7 @@ data_dir = DataDir(os.environ.get("PARK_DATA_DIR", "/tmp/park/data"))
 
 
 @app.get("/status")
-async def get_namespaces():
+async def status():
     return {
         "ok": "sure am"
     }
